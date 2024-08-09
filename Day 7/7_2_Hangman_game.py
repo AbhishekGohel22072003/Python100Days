@@ -114,22 +114,40 @@ while life >0:
     # elif life == 0:
     #     print("You lose")
     
-    chosen_word_list = []
-    for i in chosen_word:
-        chosen_word_list.append(i)
+    
+    
+    
+    # chosen_word_list = []
+    # for i in chosen_word:
+    #     chosen_word_list.append(i)
+    # Rather use below
+    chosen_word_list = list(chosen_word)
+    
+    
     
     if guess in chosen_word_list:
-        for i in guess:
-            for j in chosen_word:
-                if i == j:
-                    trying += i
-                else:
-                    trying += "_"
+        # for i in guess:
+        #     for j in chosen_word:
+        #         if i == j:
+        #             trying += i
+        #         else:
+        #             trying += "_"
+        for i in chosen_word:
+            if i == guess:
+                trying += i
+            else:
+                trying +="_"
+                
+                       
+        
     else:
+        print(f"You guessed {guess}, that's not in the Word. You lose a life. Lives remaining: {life-1}")
         life -= 1
     
+    if life == 0:
+        print("You are out of lives. \nYou lose, better luck next time...")
     
-    final_word = ''
+    
     
     print(trying)             
     print(stages[life])
