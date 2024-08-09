@@ -7,6 +7,7 @@ print(A)
 
 # print(len(123))
 # Error
+# as in python, we cannot calculate the length of integer
 
 a = 12
 b = a/2
