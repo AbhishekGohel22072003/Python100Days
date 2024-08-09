@@ -97,7 +97,7 @@ while life >0:
 
 
     # TODO-3 - Check if the letter the user guessed(guess) is one of the letter in the chosen_word 
-    trying = ''
+    trying = '_'*len(chosen_word)
 
 
 
@@ -132,11 +132,18 @@ while life >0:
         #             trying += i
         #         else:
         #             trying += "_"
-        for i in chosen_word:
-            if i == guess:
-                trying += i
-            else:
-                trying +="_"
+        # for i in chosen_word:
+            # if i == guess:
+                # trying += i
+            # else:
+              #   trying +="_"
+        my_indices=[]
+        for i in range(len(chosen_word)):
+            if guess == chosen_word[i]:
+                my_indices.append(i)
+        
+        for i in my_indices:
+            trying[i] = guess
                 
                        
         
