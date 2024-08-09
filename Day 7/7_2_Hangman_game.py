@@ -98,6 +98,7 @@ while life >0:
 
     # TODO-3 - Check if the letter the user guessed(guess) is one of the letter in the chosen_word 
     trying = '_'*len(chosen_word)
+    trying_list = list(trying)
 
 
 
@@ -143,7 +144,7 @@ while life >0:
                 my_indices.append(i)
         
         for i in my_indices:
-            trying[i] = guess
+            trying_list[i] = guess
                 
                        
         
@@ -156,6 +157,6 @@ while life >0:
     
     
     
-    print(trying)             
+    print(trying_list)             
     print(stages[life])
     
