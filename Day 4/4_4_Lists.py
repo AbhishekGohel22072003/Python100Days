@@ -8,6 +8,14 @@ print(list[1]) #output: 2
 print(list[-1]) #output: am
 
 
+# The following is from practice
+# list = [1,2,3,4,5]
+# print(list[1:2:3]) #[2]
+# print(list[-1:-5:-1])  #[5,4,3,2]
+# print(list[::3]) #[1,4]
+# print(list[-1:-4:-1]) #[5,4,3]
+
+
 
 
 
@@ -41,7 +49,7 @@ print(list)
 
 
 
-list.insert(0,"Abhishek") #Insert an item at a given position. The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).
+list.insert(0,"Abhishek") #Insert an item at a given position. The first argument is the index of the element before which to insert, so list.insert(0, 'x') inserts at the front of the list,and list.insert(len(list), 'x') is equivalent to list.append(x).
 print(list)
 
 
@@ -79,7 +87,8 @@ print("list.count('Abhishek') is: ",a)
 
 
 list.remove("Abhishek") #list.remove(x)
-# Remove the first item from the list whose value is equal to x. It raises a 'ValueError' if there is no such item.
+# Remove the first item from the list whose value is equal to x. 
+# It raises a 'ValueError' if there is no such item.
 print("list after remove example...:  ",list) #Here Output [1, 0, 3, 'hello', 'i', 'am', 'Abhishek']
 # Note that only 1st occurence of 'Abhishek' will be deleted....
 
@@ -90,7 +99,7 @@ print("list after remove example...:  ",list) #Here Output [1, 0, 3, 'hello', 'i
 
 
 
-list.pop(4)
+list.pop(4) #Here 4 is index
 # Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list range.
 print("list after pop example: ", list)
 
@@ -106,7 +115,10 @@ print("If we do list.pop() then list removes the element from the last index in 
 
 
 list3 = list.copy()
+# Now if we do changes in
 print('if we do list3 = list.copy() then list3:', list3)
+
+
 
 # Loop Lists
 for i in list:
@@ -190,3 +202,6 @@ list_for_sort_demo = [1,3,2,4,6,5]
 a = list_for_sort_demo.sort() 
 print(a) #Output: None
 print(list_for_sort_demo) #This will print the sorted list_for_sort_demo
+
+
+print(list3)

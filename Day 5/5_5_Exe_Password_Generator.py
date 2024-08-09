@@ -46,14 +46,14 @@ print(f'The easy to crack password is {password}')
 
 # for i in password:
 #     list_pass.append(i)
-# # print(list_pass)
+# # print(list_pass)  # we have taken the characters of password in a list
 
 # hard_password = ''
 # for i in range(1,len(list_pass) + 1):
-#     random_list_pass = random.choice(list_pass)
-#     hard_password += random_list_pass
+#     random_list_pass = random.choice(list_pass) 
+#     hard_password += random_list_pass  #Here one problem is that the number of letters, numbers and symbols for which we asked to the user are not being maintained
 
-# print(f'The hard to crack password is {hard_password}')
+# print(f'The hard to crack password is {hard_password}') #In this as i wrote in above line's comment, it we be printed randomly BUT the values might repeat, SO this is NOT efficient way
 
 
 
