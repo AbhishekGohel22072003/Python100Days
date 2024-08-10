@@ -88,18 +88,34 @@ print(logo)
 
 
 # TODO-2 - Ask The user to guess a letter and assign their answer to a variable called guess. make the guess lowercase.
+
+
 life = 6
+
+final_word = '_'*len(chosen_word)
+final_word_list = list(final_word)
+
+already_guessed = set()
+
+
 while life >0:
     
     guess = input("Guess a letter: ").lower()
+
+
+    if guess in already_guessed:
+        print(f"You already have guessed {guess}.")
+        continue
+    else:
+        already_guessed.add(guess)
+        
 
 # print(guess)
 
 
     # TODO-3 - Check if the letter the user guessed(guess) is one of the letter in the chosen_word 
-    trying = '_'*len(chosen_word)
-    trying_list = list(trying)
-
+    # trying = '_'*len(chosen_word)
+    # trying_list = list(trying)
 
 
     
@@ -110,7 +126,7 @@ while life >0:
     
     # if trying.count("_") == len(chosen_word):
     #     life -=1
-    # elif trying.count("_") == 0:    
+    # elif final_word.count("_") == 0:    
     #     print("You win!!")
     # elif life == 0:
     #     print("You lose")
@@ -126,37 +142,39 @@ while life >0:
     
     
     
-    if guess in chosen_word_list:
-        # for i in guess:
-        #     for j in chosen_word:
-        #         if i == j:
-        #             trying += i
-        #         else:
-        #             trying += "_"
-        # for i in chosen_word:
-            # if i == guess:
-                # trying += i
-            # else:
-              #   trying +="_"
-        my_indices=[]
-        for i in range(len(chosen_word)):
-            if guess == chosen_word[i]:
-                my_indices.append(i)
-        
-        for i in my_indices:
-            trying_list[i] = guess
-                
-                       
-        
-    else:
+    if guess not in chosen_word_list:
+    # if guess in chosen_word_list:
+    #     for i in guess:
+    #         for j in chosen_word:
+    #             if i == j:
+    #                 trying += i
+    #             else:
+    #                 trying += "_"
+    # else:
         print(f"You guessed {guess}, that's not in the Word. You lose a life. Lives remaining: {life-1}")
         life -= 1
     
-    if life == 0:
-        print("You are out of lives. \nYou lose, better luck next time...")
+        if life == 0:
+            print("You are out of lives. \nYou lose, better luck next time...")
+        
+        
     
     
     
-    print(trying_list)             
+    my_indices =[]
+    for i in range(len(chosen_word)):
+        if guess == chosen_word[i]:
+            my_indices.append(i)
+    
+    for i in my_indices:
+        final_word_list[i] = guess
+    
+    final_word = ''.join(final_word_list)
+    
+    print(final_word)
+    if "_" not in final_word_list:
+        print("Congratulations!! You win")
+        print(stages[life])
+        break
     print(stages[life])
     
