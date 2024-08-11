@@ -4,7 +4,7 @@
 import random
 word_list = ['abhishek','hetal','bhavik','maitri','amit','krishna','ami','umang','vaibhavi','kalyani','madhavi','nilesh','chetan','chirag','paras','tushar','vishal','nikit','anjali','drashti','parth','kuki','abhay','tirth','dhimant','jaymit','devangi','krupali']
 
-stages = ['''
+stages = [r'''
   +---+
   |   |
   O   |
@@ -12,7 +12,7 @@ stages = ['''
  / \  |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
   O   |
@@ -20,7 +20,7 @@ stages = ['''
  /    |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
   O   |
@@ -28,14 +28,14 @@ stages = ['''
       |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
   O   |
  /|   |
       |
       |
-=========''', '''
+=========''', r'''
   +---+
   |   |
   O   |
@@ -43,7 +43,7 @@ stages = ['''
       |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
   O   |
@@ -51,7 +51,7 @@ stages = ['''
       |
       |
 =========
-''', '''
+''', r'''
   +---+
   |   |
       |
@@ -61,7 +61,7 @@ stages = ['''
 =========
 ''']
 
-logo = ''' 
+logo = r''' 
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -81,7 +81,7 @@ logo = '''
 chosen_word = random.choice(word_list)
 
 
-print(chosen_word)
+# print(chosen_word)
 
 
 print(logo)
@@ -92,29 +92,30 @@ print(logo)
 
 life = 6
 
-final_word = '_'*len(chosen_word)
-final_word_list = list(final_word)
+final_word = '_'*len(chosen_word) #Aane while loop ni bahar j initialize karavvo pade nahitar dar vakhte reinitialize thay jethi navo word juna word sathe integrate na thai shake
+final_word_list = list(final_word) #tema index pramane words add karva mate string to list ma typecast karyu
+# kemke string immutable chhe jyare list mutable chhe
 
 already_guessed = set()
-
+# aane pan bahar j initialize karavvu pade nahitar jo loop ma hoy to dar vakhate set empty thai jay and expected result na male
 
 while life >0:
     
-    guess = input("Guess a letter: ").lower()
+    guess = input("Guess a letter: ").lower() #kemke badha j words lower case ma chhe
 
 
     if guess in already_guessed:
         print(f"You already have guessed {guess}.")
         continue
     else:
-        already_guessed.add(guess)
+        already_guessed.add(guess) #jo phelethi set ma hashe to nahi add kare nahitar add kari deshe
         
 
 # print(guess)
 
 
     # TODO-3 - Check if the letter the user guessed(guess) is one of the letter in the chosen_word 
-    # trying = '_'*len(chosen_word)
+    # trying = '_'*len(chosen_word) # aa matr try leva initialise karavyu chhe
     # trying_list = list(trying)
 
 
@@ -124,7 +125,7 @@ while life >0:
       
     
     
-    # if trying.count("_") == len(chosen_word):
+    # if trying.count("_") == len(chosen_word): # ama underscores valo problem aavto hato 
     #     life -=1
     # elif final_word.count("_") == 0:    
     #     print("You win!!")
@@ -142,14 +143,16 @@ while life >0:
     
     
     
+    
     if guess not in chosen_word_list:
-    # if guess in chosen_word_list:
+        # nichena commented code ni kai jarur j nathi
     #     for i in guess:
     #         for j in chosen_word:
     #             if i == j:
     #                 trying += i
     #             else:
     #                 trying += "_"
+    
     # else:
         print(f"You guessed {guess}, that's not in the Word. You lose a life. Lives remaining: {life-1}")
         life -= 1
@@ -160,7 +163,8 @@ while life >0:
         
     
     
-    
+    # have je places par guessed letter hashe teni index my_indices ma store thashe and te mujab final_word_list ma '_' ni jagya e guess je hashe te aavi jashe
+        
     my_indices =[]
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
@@ -168,13 +172,14 @@ while life >0:
     
     for i in my_indices:
         final_word_list[i] = guess
-    
+
     final_word = ''.join(final_word_list)
     
     print(final_word)
+    
     if "_" not in final_word_list:
         print("Congratulations!! You win")
         print(stages[life])
         break
-    print(stages[life])
     
+    print(stages[life])
