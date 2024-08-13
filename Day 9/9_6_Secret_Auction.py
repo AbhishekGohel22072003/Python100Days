@@ -19,7 +19,19 @@ import os #Imported to clear the screen every time we type 'yes'
 
 
 
-logo = "logo will be here"
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
 print(logo)
 
 print("Welcome to the secret auction program.")
