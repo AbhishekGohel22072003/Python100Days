@@ -21,6 +21,7 @@ randomFloat = random.random()
 # That means includes 0 but not 1
 
 print(randomFloat)
+# 16 decimal places will be     printed
 
 
 # જો આપણે random FLOATING POINT NUMBER 0 થી 5 વચ્ચે જોઈતો હોય તો,
