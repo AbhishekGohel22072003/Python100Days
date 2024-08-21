@@ -14,7 +14,7 @@ def days_in_month(year,month):
     '''This is a called DOCSTRING
            That means when ever you are calling a function
            and you hover the cursor on the function's name 
-           then it will print these lines.
+           then it will show these lines.
            
         In short, you can use this to make sure that user is not confused while using this function  
     '''
