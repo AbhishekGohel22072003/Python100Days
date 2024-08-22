@@ -37,10 +37,10 @@ print(logo)
 print("Welcome to the secret auction program.")
 
 my_bidders = {}
-i=0
+key=0
 
 def add_bidder():
-    global i
+    global key
     name = input("What is your name?: ")
     bid = int(input("What is your bid?: $"))
     
@@ -48,12 +48,12 @@ def add_bidder():
     
     new_bidder = [name,bid]
     
-    my_bidders[i] = new_bidder
+    my_bidders[key] = new_bidder
     
         
     if y_or_n == 'yes':
         os.system('cls')
-        i +=1
+        key +=1
         add_bidder()
     
     elif y_or_n == 'no':
@@ -68,4 +68,4 @@ def add_bidder():
         print(f"The winner is {my_bidders[index][0]} with a bid of ${my_bidders[index][1]}")
 
 add_bidder()
-print(my_bidders)
+# print(my_bidders)

@@ -39,7 +39,8 @@ print(list)
 
 
 
-list.append("Abhishek") #Add an item to the end of the list. Equivalent to a[len(a):] = [x].
+list.append("Abhishek") #Add an item to the end of the list. 
+# Equivalent to a[len(a):] = [x].
 print(list)
 
 

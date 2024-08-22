@@ -13,4 +13,4 @@ else:
     rounded_no_of_cans = int(no_of_cans)
 
 
-print(f"You will need approx. {rounded_no_of_cans} to paint the wall.")
+print(f"You will need approximately {rounded_no_of_cans} cans to paint the wall.")

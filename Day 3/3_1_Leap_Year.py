@@ -20,12 +20,13 @@
         
         
         
+# Revision
 try:
     year = int(input("Enter a year to check if it is a leap year or not: "))
-except:
-    print("You have entered the wrong input. Try Again entering the integer only...")
+except ValueError:
+    print("The year entered by you is not valid or conatains some letters or special characters. Try again entering the integer only...")
 else:
-    if ((year % 4 ==0) & (year % 100 !=0)) or (year % 400 == 0):
-        print(f"The year you have entered is {year} & is a LEAP year")
+    if ((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0):
+        print(f'The year you have entered is {year} and is a leap year...')
     else:
-        print(f"The year you have entered is {year} & is NOT A LEAP year")
+        print(f'The year you have entered is {year} and is NOT a leap year...')

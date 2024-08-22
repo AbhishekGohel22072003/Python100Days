@@ -35,8 +35,8 @@ print(f"IF we do print(dictionary) then: {dictionary}")  # IF we do print(dictio
 print(f"IF we do print(dictionary['Abhishek']) then: {dictionary['Abhishek']}") # IF we do print(dictionary['Abhishek']) then: Gohel
 
 # What if we use for loop
-for i in dictionary:
-    print(i)
+for key in dictionary:
+    print(key)
     #This will print the following:
     # Abhishek
     # Adarsh
@@ -44,8 +44,8 @@ for i in dictionary:
 
     # End of dict
 
-for i in dictionary:
-    print(dictionary[i])
+for value in dictionary:
+    print(dictionary[value])
     #This will print the following:
     # Gohel
     # Borisagar
@@ -67,3 +67,5 @@ print(dictionary) # {'Abhishek': 'Gohel', 'Adarsh': 'Borisagar', 'Shyam': 'Tande
 # Deleting the values from the dictionary
 dictionary = {}
 print("After wiping all the elements from the dictionary \ni.e. dictionary = {} when we do print(dictionary) then we get:",dictionary)
+# After wiping all the elements from the dictionary
+# i.e. dictionary = {} when we do print(dictionary) then we get: {}
