@@ -56,19 +56,19 @@ if __name__ == '__main__':
    print(formated_name)
 
 
-''' If we print the formated_name outside the scope of if statement
-    then whenever we import this module in any other file, 
-    it will give an error, such as:-
+    # If we print the formated_name outside the scope of if statement
+    # then whenever we import this module in any other file, 
+    # it will give an error, such as:-
     
-      Traceback (most recent call last):
-          File "c:\Users\Abhishek Gohel\Desktop\Python 100 Days\Day 10\10_2_Multiple_Return_values.py", line 1, in <module>
-              from _10_1_Functions_With_Outputs import format_name
-          File "c:\Users\Abhishek Gohel\Desktop\Python 100 Days\Day 10\_10_1_Functions_With_Outputs.py", line 57, in <module>
-              print(formated_name)
-                    ^^^^^^^^^^^^^
-      NameError: name 'formated_name' is not defined. Did you mean: 'format_name'?
+    #   Traceback (most recent call last):
+    #       File "c:/Users/Abhishek Gohel/Desktop/Python 100 Days/Day 10/10_2_Multiple_Return_values.py", line 1, in <module>
+    #           from _10_1_Functions_With_Outputs import format_name
+    #       File "c:/Users/Abhishek Gohel/Desktop/Python 100 Days/Day 10/_10_1_Functions_With_Outputs.py", line 57, in <module>
+    #           print(formated_name)
+    #                 ^^^^^^^^^^^^^
+    #   NameError: name 'formated_name' is not defined. Did you mean: 'format_name'?
 
-'''
+
 
 
 
