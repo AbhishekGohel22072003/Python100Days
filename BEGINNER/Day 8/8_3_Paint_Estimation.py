@@ -6,7 +6,10 @@ width = float(input("Enter the width of the wall in meters: "))
 print(f'The total area of wall is {height*width} square meters.')
 
 no_of_cans = (height*width)/5
-rounded_no_of_cans = 0
+
+# rounded_no_of_cans = 0
+# No need to do the above
+
 if no_of_cans > int(no_of_cans):
     rounded_no_of_cans = int(no_of_cans+1)
 else:
