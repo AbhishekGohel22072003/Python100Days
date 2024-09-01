@@ -53,10 +53,23 @@ print(list)
 list.insert(0,"Abhishek") #Insert an item at a given position. The first argument is the index of the element before which to insert, so list.insert(0, 'x') inserts at the front of the list,and list.insert(len(list), 'x') is equivalent to list.append(x).
 print(list)
 
+# if we have an EMPTY LIST then we can also do
+# list.insert(0,1)
 
 
 
 
+
+"""MOST IMPORTANT THING TO BE READ"""
+# suppose we do like this
+# list = []
+# list.insert(5,1)
+# list.insert(5,2)
+# and we do
+# print(list.index(2))
+#
+# then we will get output
+# 1
 
 
 
@@ -116,7 +129,7 @@ print("If we do list.pop() then list removes the element from the last index in 
 
 
 list3 = list.copy()
-# Now if we do changes in
+# Now even if we do changes in list, list3 remains unchanged
 print('if we do list3 = list.copy() then list3:', list3)
 
 
@@ -129,7 +142,7 @@ for i in list:
 
 # Loop Through index number
 # for i in range(len(list)):
-#     print(i)
+#     print(list[i])
     
     
 # using while loop 
@@ -174,7 +187,7 @@ print("After list.reverse() the list:",list)
 # print("The value of list.index('Abhishek') is: ",b)
 
 # Traceback (most recent call last):
-#   File "c:\Users\Abhishek Gohel\Desktop\Python 100 Days\Day 4\4_4_Lists.py", line 159, in <module>
+#   File "c:\Users\Abhishek Gohel\Desktop\Python 100 Days\Day 4\4_4_Lists.py", line ...(લાઇન નંબર જે હોય તે), in <module>
     # b = list.index("Abhishek")
         # ^^^^^^^^^^^^^^^^^^^^^^
 # ValueError: 'Abhishek' is not in list
@@ -192,7 +205,7 @@ print("the value of list.index('hello') is: ",b)  # 1
 # list.sort()
 
 # Traceback (most recent call last):
-#   File "c:\Users\Abhishek Gohel\Desktop\Python 100 Days\Day 4\4_4_Lists.py", line 179, in <module>
+#   File "c:\Users\Abhishek Gohel\Desktop\Python 100 Days\Day 4\4_4_Lists.py", line ...(લાઇન નંબર જે હોય તે), in <module>
 #     list.sort()
 # TypeError: '<' not supported between instances of 'int' and 'str'
 
