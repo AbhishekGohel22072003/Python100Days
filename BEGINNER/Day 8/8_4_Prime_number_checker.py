@@ -46,7 +46,7 @@ def prime_checker():
     number = int(input("Enter a number to check if it is a prime number or not: "))
     prime = True
     
-    for i in range(2,number//2):
+    for i in range(2,number//2+1):
         if number == 1:
             print("The number 1 is not a prime number.")
         elif number % i == 0:
