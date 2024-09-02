@@ -24,7 +24,7 @@ print(a)
 
 
 while True:
-    b = 'same thing is applicable for loops also as this is also accesible outside the while loop'
+    b = 'same thing is applicable for loops also as this is also accessible outside the while loop'
     break
 
 print(b)
