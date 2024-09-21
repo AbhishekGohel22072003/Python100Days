@@ -90,28 +90,30 @@ guessing_word = '_'*len(chosen_word)
 guessing_word_list = list(guessing_word)
 
 while life >0:
+    # we will ask the user to guess a letter
     input_letter = input("Guess a letter: ").lower()
     
+    # If user guessed the same character than we will tell then that they have entered the same letter again
     if input_letter in already_guessed:
         print(f"You already have guessed {input_letter}...")
         continue
     else:
         already_guessed.add(input_letter)
         
-    
+    # if the guessed word is wrong then we will decrease life by 1.
     if input_letter not in chosen_word_list:
         life -= 1
         print(f"You guessed {input_letter}, that's not in the word. You lose a life. Lives remaining: {life}")
         
-
     else:
         my_indices = []
+        # we will fetch the indices where the guessed letter matches with the letter in original word
         for i in range(len(chosen_word_list)):
             if input_letter == chosen_word_list[i]:
                 my_indices.append(i)
         
         # print(my_indices)
-        
+        # we will replace the '_'(underscore(s)) with the guessed letter
         for i in my_indices:
             guessing_word_list[i] = input_letter
             
